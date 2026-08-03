@@ -506,3 +506,14 @@ button { font-family:"Baloo 2",sans-serif; }
     transition-duration:.01ms !important;
   }
 }
+
+/* Botões permanecem fixos para facilitar leitura e toque */
+.action-grid .round-icon { animation:none; }
+.action-grid a:hover,.action-grid a:active,
+.primary-link:hover,.primary-link:active,
+.rsvp-form button:hover,.rsvp-form button:active,
+.back-link:hover,.back-link:active,
+.success-modal button:hover,.success-modal button:active {
+  transform:none;
+}
+.action-grid a:hover .round-icon { transform:none; }
