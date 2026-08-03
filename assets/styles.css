@@ -620,6 +620,77 @@ button { font-family:"Baloo 2",sans-serif; }
   .garden i:nth-child(3n) { height:94px; }
 }
 
+/* Flores simples e ilustradas */
+.garden { height:112px; padding-inline:2%; }
+.garden i,.garden i:nth-child(2n),.garden i:nth-child(3n) {
+  flex:0 0 5px;
+  width:5px;
+  height:88px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#527c4f,#94b276,#466f47);
+  box-shadow:none;
+}
+.garden i::before,.garden i::after,
+.garden i:nth-child(2n)::before,.garden i:nth-child(2n)::after,
+.garden i:nth-child(3n)::before,.garden i:nth-child(4n)::after {
+  border:0;
+  filter:drop-shadow(0 2px 2px #7043802c);
+}
+.garden i::before,
+.garden i:nth-child(2n)::before,.garden i:nth-child(3n)::before {
+  left:-6px;
+  top:7px;
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  background:#efc95c;
+  box-shadow:
+    0 -13px 0 3px #d9b4e9,
+    12px -4px 0 3px #c99cdd,
+    7px 11px 0 3px #b981d0,
+    -7px 11px 0 3px #c594da,
+    -12px -4px 0 3px #e2c5ee;
+  transform:rotate(0) scale(var(--flower-scale,1));
+}
+.garden i::after,
+.garden i:nth-child(2n)::after,.garden i:nth-child(4n)::after {
+  left:-16px;
+  top:50px;
+  width:18px;
+  height:10px;
+  border-radius:100% 0 100% 0;
+  background:#78a069;
+  box-shadow:18px 13px 0 #91ad76;
+  transform:rotate(-18deg);
+}
+.garden i:nth-child(2n) { height:74px; --r:8deg; --flower-scale:.78; }
+.garden i:nth-child(3n) { height:99px; --r:-9deg; --flower-scale:1.08; }
+.garden i:nth-child(4n) { --flower-scale:.9; }
+.garden i:nth-child(5n) { --r:13deg; }
+.garden--top { top:-8px; }
+.garden--bottom { bottom:-8px; }
+
+.success-modal__flowers i::before,.success-modal__flowers i::after {
+  border:0;
+  filter:drop-shadow(0 2px 2px #7043802c);
+}
+.success-modal__flowers i::before {
+  left:-6px; top:13px; width:16px; height:16px; border-radius:50%; background:#efc95c;
+  box-shadow:0 -11px 0 2px #d9b4e9,10px -3px 0 2px #c99cdd,6px 9px 0 2px #b981d0,-6px 9px 0 2px #c594da,-10px -3px 0 2px #e2c5ee;
+}
+.success-modal__flowers i::after {
+  left:-11px; top:50px; width:16px; height:8px; border-radius:100% 0; background:#79a069; box-shadow:15px 10px 0 #91ad76;
+}
+
+@media(max-width:540px) {
+  .garden { height:92px; }
+  .garden i,.garden i:nth-child(2n),.garden i:nth-child(3n) { width:4px; flex-basis:4px; height:72px; }
+  .garden i::before,.garden i:nth-child(2n)::before,.garden i:nth-child(3n)::before { width:14px; height:14px; left:-5px; box-shadow:0 -10px 0 2px #d9b4e9,9px -3px 0 2px #c99cdd,5px 8px 0 2px #b981d0,-5px 8px 0 2px #c594da,-9px -3px 0 2px #e2c5ee; }
+  .garden i::after,.garden i:nth-child(2n)::after { top:40px; width:14px; height:8px; left:-12px; box-shadow:14px 10px 0 #91ad76; }
+  .garden i:nth-child(2n) { height:60px; }
+  .garden i:nth-child(3n) { height:80px; }
+}
+
 /* Botões permanecem fixos para facilitar leitura e toque */
 .action-grid .round-icon { animation:none; }
 .action-grid a:hover,.action-grid a:active,
