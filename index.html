@@ -11,14 +11,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="art-page">
-  <main class="invite" aria-label="Convite de aniversário da Ana Liz">
-    <img class="invite__art" src="exemplo/WhatsApp%20Image%202026-08-03%20at%2011.10.00.jpeg" alt="Ana Liz, 1 ano. Dia 3 de setembro de 2026, às 19 horas, no Divert Eventos.">
-    <nav class="invite__actions" aria-label="Ações do convite">
-      <a class="hotspot hotspot--rsvp" href="confirmar.html" aria-label="Confirmar presença"><span>Confirmar presença</span></a>
-      <a class="hotspot hotspot--map" id="map-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Abrir localização no mapa"><span>Acessar localização</span></a>
-      <a class="hotspot hotspot--gifts" href="presentes.html" aria-label="Ver sugestões de presentes"><span>Sugestão de presentes</span></a>
-    </nav>
+<body class="invitation-page">
+  <main class="paper">
+    <div class="garden garden--top" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="garden garden--bottom" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="stitched-frame" aria-hidden="true"></div>
+    <span class="css-butterfly bf-1" aria-hidden="true"><i></i></span>
+    <span class="css-butterfly bf-2" aria-hidden="true"><i></i></span>
+    <span class="css-butterfly bf-3" aria-hidden="true"><i></i></span>
+    <span class="css-butterfly bf-4" aria-hidden="true"><i></i></span>
+
+    <section class="hero-content">
+      <p class="eyebrow">Você é nosso convidado especial</p>
+      <h1 class="name">Ana Liz</h1>
+      <p class="age"><strong>1</strong><span>ano</span></p>
+      <p class="verse">Entre flores e borboletas, vou completar<br>meu primeiro aninho!</p>
+
+      <div class="date-row" aria-label="3 de setembro de 2026, às 19 horas">
+        <div><strong>03</strong><span>Setembro</span></div>
+        <span class="date-butterfly" aria-hidden="true">♡</span>
+        <div><strong>2026</strong><span>19:00 horas</span></div>
+      </div>
+
+      <p class="venue"><span>Local</span><strong>DIVERT EVENTOS</strong></p>
+
+      <nav class="action-grid" aria-label="Ações do convite">
+        <a href="confirmar.html">
+          <span class="round-icon gold-ring" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M12 8h24v32H12zM18 14h12M19 35l5-5 5 5M24 30v-8"/></svg>
+          </span>
+          <span>Confirme sua<br>presença</span>
+        </a>
+        <a id="map-link" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="round-icon gold-ring" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 42s12-12 12-22a12 12 0 1 0-24 0c0 10 12 22 12 22z"/><circle cx="24" cy="20" r="4"/></svg>
+          </span>
+          <span>Acesse a<br>localização</span>
+        </a>
+        <a href="presentes.html">
+          <span class="round-icon gold-ring" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 21h32v21H8zM6 15h36v8H6zM24 15v27M24 15c-8 0-10-9-4-9 4 0 4 9 4 9zm0 0c8 0 10-9 4-9-4 0-4 9-4 9z"/></svg>
+          </span>
+          <span>Sugestão de<br>presentes</span>
+        </a>
+      </nav>
+    </section>
   </main>
   <script src="assets/config.js"></script>
   <script src="assets/app.js"></script>
