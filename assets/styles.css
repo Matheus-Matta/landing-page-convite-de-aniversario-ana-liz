@@ -291,3 +291,19 @@ button { font-family:"Baloo 2",sans-serif; }
   .rsvp-card__content { width:calc(100vw - 6rem) !important; max-width:calc(100vw - 6rem); }
   .rsvp-form { overflow:hidden; }
 }
+
+.back-link {
+  display:block;
+  width:max-content;
+  max-width:100%;
+  margin:1.5rem auto 0;
+  padding:.45rem .9rem;
+  border-bottom:2px solid #b487c8;
+  color:var(--dark);
+  font:600 1rem "Baloo 2",sans-serif;
+  text-align:center;
+  text-decoration:none;
+  transition:transform .2s ease,color .2s ease;
+}
+.back-link:hover { color:var(--purple); transform:translateY(-2px); }
+.rsvp-form .back-link { margin-top:1.25rem; }
