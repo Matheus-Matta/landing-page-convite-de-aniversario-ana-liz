@@ -202,3 +202,38 @@ button { font-family:"Baloo 2",sans-serif; }
   .gift-item span { font-size:1.7rem; }
   .gift-item strong { font-size:1.3rem; }
 }
+
+/* Caligrafia somente nos títulos; demais textos priorizam leitura */
+.hero-content,.gifts-content,.venue,.date-row,.action-grid,
+.age strong,.age span,.verse,.date-row strong,.date-row span,
+.venue span,.venue strong,.eyebrow,.action-grid a,.gifts-intro,
+.gift-item span,.gift-item strong,.primary-link,
+.rsvp-card .eyebrow,.rsvp-card .intro {
+  font-family:"Baloo 2",sans-serif;
+}
+.name,.gifts-title,.rsvp-card h1 {
+  font-family:"Dancing Script",cursive;
+}
+.eyebrow { font-size:.95rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+.verse { font-size:clamp(1.15rem,3.6vw,1.55rem); font-weight:500; line-height:1.5; }
+.age strong { font-size:4.3rem; font-weight:500; line-height:1; }
+.age span { font-size:1.7rem; font-weight:600; }
+.date-row strong { font-size:clamp(2.8rem,8vw,4rem); font-weight:500; line-height:1.1; }
+.date-row span { font-size:1.15rem; font-weight:600; }
+.venue span { font-size:1.45rem; font-weight:600; }
+.venue strong { font-size:1.25rem; font-weight:600; letter-spacing:.04em; }
+.action-grid a { font-size:.9rem; font-weight:600; line-height:1.15; text-transform:uppercase; }
+.gifts-intro { font-size:1.1rem; font-weight:500; line-height:1.55; }
+.gift-item span { font-size:1.5rem; font-weight:600; }
+.gift-item strong { font-size:1.2rem; font-weight:600; }
+.primary-link { font-size:1.15rem; font-weight:600; }
+.rsvp-card .intro { font-size:1.1rem; font-weight:500; }
+
+@media(max-width:540px) {
+  .eyebrow { font-size:.78rem; }
+  .verse { font-size:1rem; }
+  .action-grid a { font-size:.68rem; }
+  .gifts-intro { font-size:1rem; }
+  .gift-item span { font-size:1.3rem; }
+  .gift-item strong { font-size:1.05rem; }
+}
