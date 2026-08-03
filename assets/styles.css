@@ -786,6 +786,82 @@ button { font-family:"Baloo 2",sans-serif; }
   .garden--bottom::after { height:48px; }
 }
 
+/* Experiência compacta e leve para telefones */
+@media(max-width:600px) {
+  body.invitation-page { height:100svh; min-height:100svh; overflow:hidden; }
+  body.invitation-page .paper {
+    width:100%;
+    height:100svh;
+    min-height:100svh;
+    overflow:hidden;
+  }
+  body.invitation-page .paper::after { top:.65rem; bottom:4.8rem; }
+  body.invitation-page .stitched-frame { top:1.2rem; bottom:5.35rem; }
+  body.invitation-page .hero-content,
+  body.invitation-page .gifts-content {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:calc(100% - 5.4rem);
+    height:calc(100svh - 5rem);
+    min-height:0;
+    padding:1.7rem 0 4.2rem;
+  }
+  body.invitation-page .eyebrow { margin:0; font-size:.68rem; line-height:1.1; }
+  body.invitation-page .name { margin:.35rem auto .1rem; font-size:clamp(3.3rem,15vw,4.2rem); line-height:1.05; }
+  body.invitation-page .age { margin:.05rem 0 .2rem; }
+  body.invitation-page .age strong { font-size:3.1rem; }
+  body.invitation-page .age span { font-size:1.25rem; }
+  body.invitation-page .verse { margin:.35rem auto; font-size:.84rem; line-height:1.25; }
+  body.invitation-page .floral-divider { width:130px; margin:.3rem auto; }
+  body.invitation-page .date-row { gap:.55rem; margin:.4rem 0; }
+  body.invitation-page .date-row strong { font-size:2.25rem; }
+  body.invitation-page .date-row span { font-size:.92rem; line-height:1.1; }
+  body.invitation-page .date-butterfly,body.invitation-page .date-butterfly svg { width:30px; }
+  body.invitation-page .venue { margin:.4rem 0; gap:0; }
+  body.invitation-page .venue span { font-size:1.08rem; }
+  body.invitation-page .venue strong { font-size:1rem; }
+  body.invitation-page .venue span svg { width:18px; }
+  body.invitation-page .action-grid { width:100%; margin:.55rem 0 0; gap:.2rem; }
+  body.invitation-page .round-icon { width:54px; border-width:4px; outline-width:2px; }
+  body.invitation-page .round-icon svg { width:31px; }
+  body.invitation-page .action-grid a { gap:.4rem; font-size:.58rem; line-height:1.05; }
+  body.invitation-page .garden--bottom { height:70px; }
+  body.invitation-page .garden--bottom i,
+  body.invitation-page .garden--bottom i:nth-child(2n),
+  body.invitation-page .garden--bottom i:nth-child(3n) { height:55px; }
+  body.invitation-page .garden--bottom i::before,
+  body.invitation-page .garden--bottom i:nth-child(2n)::before,
+  body.invitation-page .garden--bottom i:nth-child(3n)::before { transform:scale(.72); }
+  body.invitation-page .garden--bottom::after { height:34px; }
+
+  body.invitation-page .gifts-content { padding-top:1.2rem; }
+  body.invitation-page .gifts-title { margin:.25rem 0; font-size:2.7rem; line-height:1; }
+  body.invitation-page .gifts-intro { margin:.25rem auto .4rem; font-size:.78rem; line-height:1.25; }
+  body.invitation-page .gift-list { gap:.1rem; }
+  body.invitation-page .gift-item { gap:.55rem; padding:.25rem 0; }
+  body.invitation-page .gift-icon { flex-basis:46px; width:46px; height:46px; }
+  body.invitation-page .gift-icon svg { width:37px; }
+  body.invitation-page .gift-item span { font-size:1.05rem; }
+  body.invitation-page .gift-item strong { font-size:.88rem; }
+  body.invitation-page .primary-link { margin-top:.55rem; padding:.55rem 1rem; font-size:.9rem; }
+  body.invitation-page .back-link { margin-top:.5rem; padding:.2rem .6rem; font-size:.78rem; }
+
+  body.invitation-page *,body.invitation-page *::before,body.invitation-page *::after {
+    animation:none !important;
+  }
+  body.form-page *,body.form-page *::before,body.form-page *::after {
+    animation:none !important;
+  }
+  body.invitation-page .name::after { display:none; }
+}
+
+@media(max-width:600px) and (max-height:700px) {
+  body.invitation-page .hero-content,body.invitation-page .gifts-content { transform:scale(.9); width:calc(100% - 4rem); }
+  body.invitation-page .name { font-size:3rem; }
+  body.invitation-page .garden--bottom { height:58px; }
+}
+
 /* Botões permanecem fixos para facilitar leitura e toque */
 .action-grid .round-icon { animation:none; }
 .action-grid a:hover,.action-grid a:active,
