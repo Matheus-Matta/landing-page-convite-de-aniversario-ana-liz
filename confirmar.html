@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#c9a4df">
+  <meta name="description" content="Confirmação de presença no aniversário da Ana Liz.">
+  <title>Confirme sua presença — Ana Liz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="form-page">
+  <main class="rsvp-card">
+    <div class="flower-border flower-border--top" aria-hidden="true"></div>
+    <span class="butterfly butterfly--one" aria-hidden="true">🦋</span>
+    <span class="butterfly butterfly--two" aria-hidden="true">🦋</span>
+    <a class="back-button back-button--form" href="index.html" aria-label="Voltar ao convite">‹ <span>Voltar</span></a>
+
+    <section class="rsvp-card__content">
+      <p class="eyebrow">Ana Liz • 1 ano</p>
+      <h1>Confirme sua<br>presença</h1>
+      <p class="intro">Vai ser uma alegria ter você com a gente nesse dia tão especial!</p>
+
+      <form id="rsvp-form" class="rsvp-form">
+        <label for="name">Nome completo</label>
+        <input id="name" name="nome" type="text" autocomplete="name" placeholder="Digite seu nome" required minlength="3">
+
+        <label for="phone">WhatsApp</label>
+        <input id="phone" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
+
+        <fieldset>
+          <legend>Você poderá comparecer?</legend>
+          <label class="choice"><input type="radio" name="presenca" value="sim" required><span>Sim, estarei presente!</span></label>
+          <label class="choice"><input type="radio" name="presenca" value="nao"><span>Não poderei comparecer</span></label>
+        </fieldset>
+
+        <label for="guests">Quantidade de pessoas <small>(incluindo você)</small></label>
+        <input id="guests" name="quantidade_pessoas" type="number" min="1" max="20" value="1" required>
+
+        <label for="message">Recadinho para a Ana Liz <small>(opcional)</small></label>
+        <textarea id="message" name="mensagem" rows="3" maxlength="500" placeholder="Escreva uma mensagem carinhosa..."></textarea>
+
+        <button type="submit"><span>Confirmar presença</span></button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <div class="flower-border flower-border--bottom" aria-hidden="true"></div>
+  </main>
+  <script src="assets/config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
