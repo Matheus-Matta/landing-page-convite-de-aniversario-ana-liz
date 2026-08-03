@@ -517,3 +517,54 @@ button { font-family:"Baloo 2",sans-serif; }
   transform:none;
 }
 .action-grid a:hover .round-icon { transform:none; }
+
+/* Brilho do nome e atmosfera animada ao fundo */
+@keyframes name-shimmer {
+  0%,62%,100% { background-position:120% center; filter:drop-shadow(0 3px 0 #e2c9ed); }
+  74% { background-position:45% center; filter:drop-shadow(0 3px 0 #e2c9ed) drop-shadow(0 0 12px #dba7ed); }
+  86% { background-position:-25% center; filter:drop-shadow(0 3px 0 #e2c9ed); }
+}
+@keyframes ambient-gradient {
+  0%,100% { background-position:0% 30%; }
+  50% { background-position:100% 70%; }
+}
+@keyframes background-sparkle {
+  0%,100% { opacity:.12; background-position:3% 22%,97% 38%; }
+  45% { opacity:.23; }
+  50% { background-position:5% 25%,94% 34%; }
+}
+@keyframes card-glow {
+  0%,100% { box-shadow:0 10px 35px #71468720,0 0 0 10px #ffffff9c,0 0 35px #c99cdd20; }
+  50% { box-shadow:0 14px 42px #7146872b,0 0 0 10px #ffffffb5,0 0 65px #c99cdd4a; }
+}
+@keyframes stitch-breathe {
+  0%,100% { border-color:#9862b1; }
+  50% { border-color:#bd8bce; }
+}
+
+.name {
+  color:transparent;
+  background:linear-gradient(105deg,#9a61b2 0%,#b578c9 35%,#fff 47%,#f2d2fb 52%,#a767bd 64%,#9155aa 100%);
+  background-size:260% 100%;
+  background-position:120% center;
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:title-arrive .9s .15s cubic-bezier(.2,.8,.25,1) both,name-shimmer 7s 1.8s ease-in-out infinite;
+}
+.invitation-page,.form-page {
+  background-size:180% 180%;
+  animation:ambient-gradient 14s ease-in-out infinite;
+}
+.paper::before,.rsvp-card::before { animation:background-sparkle 8s ease-in-out infinite; }
+.paper::after { animation:card-glow 6s ease-in-out infinite; }
+.stitched-frame { animation:stitch-breathe 5s ease-in-out infinite; }
+
+@media(prefers-reduced-motion:reduce) {
+  .name {
+    color:var(--purple);
+    background:none;
+    -webkit-text-fill-color:currentColor;
+    filter:none;
+  }
+}
