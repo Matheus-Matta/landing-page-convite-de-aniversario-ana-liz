@@ -44,3 +44,47 @@ body { margin:0; color:var(--dark); font-family:"Quicksand",sans-serif; }
 .rsvp-card__content { position:relative; z-index:4; width:min(78%,590px); margin:auto; padding:8.5rem 0 9rem; text-align:center; }.rsvp-card h1 { margin:.3rem 0 .6rem; color:var(--purple); font:400 clamp(4rem,12vw,6.5rem)/.68 "Sacramento",cursive; }.intro { max-width:440px; margin:1.4rem auto 1.7rem; color:#796880; line-height:1.55; }
 .rsvp-form { text-align:left; }.rsvp-form>label,legend { display:block; margin:.85rem 0 .35rem; font-size:.88rem; font-weight:600; }small { color:#94859b; font-weight:400; }input,textarea { width:100%; padding:.82rem .95rem; border:1px solid #d6bce4; border-radius:13px; outline:none; color:#5e4967; background:#fff; font:inherit; }input:focus,textarea:focus { border-color:var(--purple); box-shadow:0 0 0 3px #b88dce35; }textarea{resize:vertical}fieldset{margin:1rem 0;padding:0;border:0}.choice{display:flex;align-items:center;gap:.7rem;margin:.5rem 0;padding:.7rem .8rem;border:1px solid #e2ceeb;border-radius:13px;background:#fff;cursor:pointer}.choice input{width:1.05rem;height:1.05rem;accent-color:var(--purple)}button{width:100%;margin-top:1.25rem;padding:.95rem;border:2px solid #ecc65e;border-radius:999px;color:#fff;background:linear-gradient(135deg,#ae78c8,#8752a1);font:600 1rem "Quicksand";box-shadow:0 6px 0 #c99f39;cursor:pointer}button:disabled{opacity:.65}.form-status{min-height:1.5em;margin:1rem 0 0;text-align:center;font-size:.9rem}.form-status--success{color:#547442}.form-status--error{color:#a33a60}.back-button--form{top:1rem}
 @media(max-width:540px){.stitched-frame{inset-inline:2.5%}.hero-content,.gifts-content,.rsvp-card__content{width:78%}.hero-content{padding-top:7rem}.garden{height:80px}.garden i{height:75px;width:11px}.garden i::before,.garden i::after{width:23px;height:30px}.css-butterfly{transform:scale(.7) rotate(var(--turn))}.round-icon{width:68px}.round-icon svg{width:37px}.action-grid{gap:.35rem}.action-grid a{font-size:.58rem}.date-row{gap:.6rem}.gift-item{padding-inline:0}.gift-icon{flex-basis:60px;width:60px;height:60px}.gift-icon svg{width:49px}.gift-item div{display:grid;grid-template-columns:1fr}.gift-item span{font-size:1.6rem}.gift-item strong{font-size:1rem}.back-button{top:.55rem;left:.55rem;padding:.5rem .72rem}.back-button span{display:none}.rsvp-card::before{inset-inline:2%}.rsvp-card::after{inset-inline:3.5%}}
+
+/* Cenário em largura total e tipografia infantil */
+body { font-family:"Baloo 2",sans-serif; }
+.invitation-page,.form-page { background:radial-gradient(circle at 50% 22%,#fff 0,#fffafd 48%,#ead9f5 100%); }
+.paper,.rsvp-card { width:100%; margin:0; background:transparent; box-shadow:none; }
+.paper::before { content:""; position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(circle,#bd88d7 0 3px,transparent 4px),radial-gradient(circle,#96a96f 0 2px,transparent 3px); background-position:3% 22%,97% 38%; background-size:110px 145px,135px 175px; opacity:.17; }
+.stitched-frame { top:5.7rem; bottom:5.8rem; left:max(2.5%,calc(50% - 410px)); right:max(2.5%,calc(50% - 410px)); border-radius:42px; }
+.garden { height:125px; }
+.garden i { width:18px; height:115px; }
+.garden i::before,.garden i::after { width:38px; height:46px; background:radial-gradient(circle at 70% 30%,#fff 0 8%,#e4c6f3 12% 34%,#ad72ca 65%,#74468f); }
+.bf-1 { left:max(2%,calc(50% - 500px)); }.bf-2 { right:max(3%,calc(50% - 510px)); }.bf-3 { right:max(2%,calc(50% - 500px)); }.bf-4 { left:max(5%,calc(50% - 470px)); }
+.hero-content,.gifts-content { width:min(calc(100% - 3rem),620px); padding:9rem 0 9.5rem; }
+.name { margin:1rem 0 .6rem; font:400 clamp(4rem,12vw,7.4rem)/1.1 "Pacifico",cursive; text-shadow:2px 3px #e2c9ed; }
+.age { margin:.5rem 0 1rem; }
+.age strong { font:400 4.3rem/1.15 "Pacifico",cursive; }.age span { font:400 1.8rem/1.4 "Pacifico",cursive; }
+.verse { margin:1.5rem auto; font:400 clamp(1.2rem,4vw,1.7rem)/1.6 "Pacifico",cursive; }
+.date-row { margin:1.8rem 0; }
+.date-row strong { font:400 clamp(2.6rem,8vw,4rem)/1.2 "Pacifico",cursive; }.date-row span { font:500 1.1rem/1.5 "Baloo 2",sans-serif; }
+.venue span { font:400 1.6rem/1.5 "Pacifico",cursive; }
+.round-icon { width:96px; border-radius:43% 57% 46% 54%/54% 44% 56% 46%; background:linear-gradient(145deg,#d9ade9,#9160ad); transition:.2s ease; }
+.gold-ring { border:6px solid #f3c955; outline:3px solid #bd8c2f; box-shadow:inset 0 0 0 3px #fff5,0 7px 16px #70438035; }
+.round-icon svg { width:54px; fill:#fff2; stroke-width:2.7; }
+.gifts-content { padding-top:8.5rem; }
+.gifts-title { margin:1rem 0 1.5rem; font:400 clamp(3.1rem,9vw,5.4rem)/1.25 "Pacifico",cursive; }
+.gifts-intro { line-height:1.65; }
+.gift-item span { font:400 1.6rem/1.35 "Pacifico",cursive; }.gift-item strong { font-family:"Baloo 2",sans-serif; font-weight:600; }
+.rsvp-card::before { inset:0; border:0; border-radius:0; background-image:radial-gradient(circle,#bd88d7 0 3px,transparent 4px),radial-gradient(circle,#96a96f 0 2px,transparent 3px); background-position:3% 22%,97% 38%; background-size:110px 145px,135px 175px; opacity:.17; }
+.rsvp-card::after { top:5.7rem; bottom:6rem; left:max(2.5%,calc(50% - 410px)); right:max(2.5%,calc(50% - 410px)); border-radius:42px; }
+.rsvp-card h1 { margin:1rem 0 1.2rem; font:400 clamp(3.1rem,9vw,5.2rem)/1.25 "Pacifico",cursive; }
+button { font-family:"Baloo 2",sans-serif; }
+
+@media(max-width:540px) {
+  .stitched-frame,.rsvp-card::after { left:2.5%; right:2.5%; }
+  .hero-content,.gifts-content,.rsvp-card__content { width:calc(100% - 5rem); }
+  .hero-content { padding-top:7.8rem; }
+  .garden { height:88px; }
+  .garden i { width:11px; height:80px; }
+  .garden i::before,.garden i::after { width:25px; height:31px; }
+  .round-icon { width:70px; }
+  .round-icon svg { width:39px; }
+  .action-grid { gap:.4rem; }
+  .action-grid a { font-size:.62rem; }
+  .gift-item span { font-size:1.35rem; }
+}
