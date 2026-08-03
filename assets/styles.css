@@ -162,3 +162,43 @@ button { font-family:"Baloo 2",sans-serif; }
   .date-row::before,.date-row::after { display:none; }
   .date-row strong { font-size:2.6rem; }
 }
+
+/* Tipografia caligráfica e textos mais destacados */
+.hero-content,.gifts-content,.venue,.date-row,.action-grid {
+  font-family:"Dancing Script",cursive;
+}
+.name,.age strong,.age span,.verse,.date-row strong,.venue span,
+.gifts-title,.gift-item span,.rsvp-card h1 {
+  font-family:"Dancing Script",cursive;
+}
+.name { font-size:clamp(5.2rem,14vw,8.8rem); font-weight:700; line-height:1.05; }
+.age strong { font-size:5rem; font-weight:600; }
+.age span { font-size:2.35rem; font-weight:600; }
+.verse { font-size:clamp(1.65rem,5vw,2.25rem); font-weight:600; line-height:1.35; }
+.eyebrow { font-family:"Dancing Script",cursive; font-size:1.15rem; font-weight:700; letter-spacing:.08em; text-transform:none; }
+.date-row strong { font-size:clamp(3.3rem,9vw,4.8rem); font-weight:700; }
+.date-row span { font-family:"Dancing Script",cursive; font-size:1.65rem; font-weight:700; }
+.venue span { font-size:2.2rem; font-weight:700; }
+.venue strong { font-family:"Dancing Script",cursive; font-size:1.65rem; font-weight:700; }
+.action-grid a { font-family:"Dancing Script",cursive; font-size:1.15rem; font-weight:700; line-height:1.05; text-transform:none; }
+.gifts-title { font-size:clamp(4rem,11vw,6.4rem); font-weight:700; }
+.gifts-intro { font-family:"Dancing Script",cursive; font-size:1.5rem; font-weight:600; line-height:1.4; }
+.gift-item span { font-size:2.15rem; font-weight:700; }
+.gift-item strong { font-family:"Dancing Script",cursive; font-size:1.65rem; font-weight:700; }
+.primary-link { font-family:"Dancing Script",cursive; font-size:1.45rem; font-weight:700; }
+.rsvp-card h1 { font-size:clamp(4rem,11vw,6rem); font-weight:700; }
+.rsvp-card .eyebrow,.rsvp-card .intro { font-family:"Dancing Script",cursive; }
+.rsvp-card .intro { font-size:1.45rem; font-weight:600; }
+.rsvp-form>label,.rsvp-form legend { font-size:1rem; }
+
+@media(max-width:540px) {
+  .name { font-size:4.6rem; }
+  .verse { font-size:1.45rem; }
+  .date-row span { font-size:1.35rem; }
+  .venue strong { font-size:1.35rem; }
+  .action-grid a { font-size:.93rem; line-height:1; }
+  .gifts-title { font-size:3.7rem; }
+  .gifts-intro { font-size:1.25rem; }
+  .gift-item span { font-size:1.7rem; }
+  .gift-item strong { font-size:1.3rem; }
+}
