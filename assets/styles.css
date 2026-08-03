@@ -556,6 +556,70 @@ button { font-family:"Baloo 2",sans-serif; }
   .name::after { display:none; }
 }
 
+/* Jardim floral com pétalas, miolos e folhagens */
+.garden { height:138px; padding-inline:1.5%; align-items:flex-start; overflow:visible; }
+.garden i {
+  flex:0 0 8px;
+  width:8px;
+  height:112px;
+  border-radius:80% 20% 60% 20%;
+  background:linear-gradient(90deg,#507c4e,#9fbd7a 55%,#416e43);
+  box-shadow:-12px 48px 0 -3px #779c63,12px 66px 0 -3px #89a970;
+}
+.garden i::before,.garden i::after {
+  width:48px;
+  height:48px;
+  border:0;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 50% 50%,#e8bd4e 0 8%,#fff6b6 9% 13%,transparent 14%),
+    radial-gradient(ellipse at 50% 13%,#f2ddfa 0 18%,#b979d0 19% 35%,transparent 36%),
+    radial-gradient(ellipse at 87% 43%,#eed7f8 0 18%,#a967c3 19% 35%,transparent 36%),
+    radial-gradient(ellipse at 73% 84%,#e5c7f2 0 18%,#9357b0 19% 35%,transparent 36%),
+    radial-gradient(ellipse at 27% 84%,#f0d9f8 0 18%,#a966c2 19% 35%,transparent 36%),
+    radial-gradient(ellipse at 13% 43%,#ead0f5 0 18%,#9b5db7 19% 35%,transparent 36%);
+  filter:drop-shadow(0 3px 2px #74468f35);
+}
+.garden i::before { left:-31px; top:8px; transform:rotate(-18deg); }
+.garden i::after { left:2px; top:42px; transform:scale(.72) rotate(24deg); }
+.garden i:nth-child(2n) { height:92px; --r:12deg; }
+.garden i:nth-child(2n)::before { transform:scale(.78) rotate(15deg); }
+.garden i:nth-child(2n)::after { top:35px; transform:scale(.58) rotate(-20deg); }
+.garden i:nth-child(3n) { height:126px; --r:-13deg; }
+.garden i:nth-child(3n)::before { transform:scale(1.08) rotate(-8deg); }
+.garden i:nth-child(4n)::after { background:
+  radial-gradient(circle at 50% 50%,#efc956 0 9%,#fff4a6 10% 14%,transparent 15%),
+  radial-gradient(ellipse at 50% 13%,#fff 0 18%,#d9b5eb 19% 35%,transparent 36%),
+  radial-gradient(ellipse at 87% 43%,#fff 0 18%,#c99fe0 19% 35%,transparent 36%),
+  radial-gradient(ellipse at 73% 84%,#f9effd 0 18%,#ba88d2 19% 35%,transparent 36%),
+  radial-gradient(ellipse at 27% 84%,#fff 0 18%,#c99fdf 19% 35%,transparent 36%),
+  radial-gradient(ellipse at 13% 43%,#fff 0 18%,#b77dce 19% 35%,transparent 36%);
+}
+.garden--top { top:-19px; }
+.garden--bottom { bottom:-18px; }
+.success-modal__flowers { height:112px; }
+.success-modal__flowers i { width:8px; height:78px; background:linear-gradient(90deg,#567c51,#a5ba82,#477044); }
+.success-modal__flowers i::before,.success-modal__flowers i::after {
+  width:40px; height:40px; border-radius:50%;
+  background:
+    radial-gradient(circle at 50% 50%,#edc552 0 10%,transparent 11%),
+    radial-gradient(ellipse at 50% 12%,#f3e2fa 0 22%,#af73c8 23% 38%,transparent 39%),
+    radial-gradient(ellipse at 87% 43%,#ead0f4 0 22%,#9b5eb7 23% 38%,transparent 39%),
+    radial-gradient(ellipse at 73% 85%,#f2ddf8 0 22%,#a566bf 23% 38%,transparent 39%),
+    radial-gradient(ellipse at 27% 85%,#ead1f4 0 22%,#9558b0 23% 38%,transparent 39%),
+    radial-gradient(ellipse at 13% 43%,#f5e7fa 0 22%,#b278ca 23% 38%,transparent 39%);
+}
+
+@media(max-width:540px) {
+  .garden { height:102px; padding-inline:0; }
+  .garden i { flex-basis:6px; width:6px; height:86px; }
+  .garden i::before,.garden i::after { width:36px; height:36px; }
+  .garden i::before { left:-23px; }
+  .garden i::after { left:0; top:36px; }
+  .garden i:nth-child(2n) { height:72px; }
+  .garden i:nth-child(3n) { height:94px; }
+}
+
 /* Botões permanecem fixos para facilitar leitura e toque */
 .action-grid .round-icon { animation:none; }
 .action-grid a:hover,.action-grid a:active,
