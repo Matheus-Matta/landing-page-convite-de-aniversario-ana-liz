@@ -524,6 +524,34 @@ button { font-family:"Baloo 2",sans-serif; }
   transform:none !important;
 }
 
+/* Reflexo isolado: a camada base do nome permanece sólida */
+@keyframes name-reflection {
+  0%,68%,100% { background-position:180% center; }
+  82% { background-position:-80% center; }
+}
+.name { position:relative; display:block; width:max-content; max-width:100%; margin-left:auto; margin-right:auto; }
+.name::after {
+  content:attr(data-text);
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  color:transparent;
+  background:linear-gradient(105deg,transparent 38%,#ffffffde 48%,#f7ddff 52%,transparent 62%);
+  background-size:250% 100%;
+  background-position:180% center;
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:none;
+  filter:none;
+  animation:name-reflection 7s 2s ease-in-out infinite;
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .name::after { display:none; }
+}
+
 /* Botões permanecem fixos para facilitar leitura e toque */
 .action-grid .round-icon { animation:none; }
 .action-grid a:hover,.action-grid a:active,
