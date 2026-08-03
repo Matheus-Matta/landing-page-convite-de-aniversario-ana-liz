@@ -691,6 +691,52 @@ button { font-family:"Baloo 2",sans-serif; }
   .garden i:nth-child(3n) { height:80px; }
 }
 
+/* Topo limpo e jardim preso ao rodapé */
+.garden--top { display:none; }
+.garden--bottom {
+  bottom:0;
+  align-items:flex-end;
+  overflow:hidden;
+}
+.garden--bottom i { transform-origin:center bottom; }
+.garden--bottom i { z-index:1; }
+.garden--bottom::after {
+  content:"";
+  position:absolute;
+  z-index:0;
+  left:0;
+  bottom:-2px;
+  width:100%;
+  height:52px;
+  background:
+    repeating-linear-gradient(72deg,transparent 0 18px,#71955f 19px 22px,transparent 23px 35px),
+    repeating-linear-gradient(108deg,transparent 0 25px,#91aa73 26px 29px,transparent 30px 44px),
+    radial-gradient(ellipse at 4% 105%,#668c58 0 7%,transparent 7.5%),
+    radial-gradient(ellipse at 9% 108%,#8aa66e 0 9%,transparent 9.5%),
+    radial-gradient(ellipse at 18% 110%,#71965f 0 8%,transparent 8.5%),
+    radial-gradient(ellipse at 30% 108%,#91aa72 0 10%,transparent 10.5%),
+    radial-gradient(ellipse at 42% 110%,#638a55 0 7%,transparent 7.5%),
+    radial-gradient(ellipse at 57% 110%,#87a36b 0 10%,transparent 10.5%),
+    radial-gradient(ellipse at 70% 108%,#6f955d 0 8%,transparent 8.5%),
+    radial-gradient(ellipse at 82% 110%,#96ad77 0 10%,transparent 10.5%),
+    radial-gradient(ellipse at 94% 105%,#648b56 0 8%,transparent 8.5%),
+    linear-gradient(to top,#769661 0 8px,transparent 9px);
+  filter:drop-shadow(0 -2px 2px #4f70482b);
+}
+.paper::after { top:2rem; }
+.stitched-frame { top:2.8rem; }
+.hero-content,.gifts-content,.rsvp-card__content { padding-top:5.6rem; }
+.rsvp-card .back-button { top:3.2rem; }
+.success-modal__flowers { display:none; }
+
+@media(max-width:540px) {
+  .paper::after { top:1.2rem; }
+  .stitched-frame { top:1.9rem; }
+  .hero-content,.gifts-content,.rsvp-card__content { padding-top:4.6rem; }
+  .garden--bottom { height:94px; }
+  .garden--bottom::after { height:42px; }
+}
+
 /* Botões permanecem fixos para facilitar leitura e toque */
 .action-grid .round-icon { animation:none; }
 .action-grid a:hover,.action-grid a:active,
