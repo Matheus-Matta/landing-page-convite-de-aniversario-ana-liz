@@ -10,6 +10,16 @@
   const guests = form.querySelector("#guests");
   const status = form.querySelector("#form-status");
   const button = form.querySelector("button[type='submit']");
+  const successModal = document.querySelector("#success-modal");
+  const closeSuccessModal = document.querySelector("#close-success-modal");
+
+  closeSuccessModal?.addEventListener("click", () => {
+    successModal.close();
+    window.location.href = "index.html";
+  });
+  successModal?.addEventListener("click", (event) => {
+    if (event.target === successModal) successModal.close();
+  });
 
   phone.addEventListener("input", () => {
     const digits = phone.value.replace(/\D/g, "").slice(0, 11);
@@ -51,8 +61,8 @@
       form.reset();
       guests.disabled = false;
       guests.value = 1;
-      status.textContent = "Presença confirmada! Obrigada por responder. 💜";
-      status.classList.add("form-status--success");
+      status.textContent = "";
+      successModal?.showModal();
     } catch (error) {
       console.error(error);
       status.textContent = "Não foi possível enviar agora. Tente novamente em instantes.";

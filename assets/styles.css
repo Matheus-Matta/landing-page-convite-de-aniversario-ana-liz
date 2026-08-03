@@ -307,3 +307,97 @@ button { font-family:"Baloo 2",sans-serif; }
 }
 .back-link:hover { color:var(--purple); transform:translateY(-2px); }
 .rsvp-form .back-link { margin-top:1.25rem; }
+
+.success-modal {
+  width:min(90vw,680px);
+  max-height:90vh;
+  margin:auto;
+  padding:0;
+  overflow:hidden;
+  border:0;
+  border-radius:44px;
+  color:var(--dark);
+  background:linear-gradient(145deg,#fff,#fff9fd 65%,#ead8f5);
+  box-shadow:0 25px 90px #3f235f75,0 0 0 7px #fff8,0 0 0 11px #a76dc0;
+}
+.success-modal::backdrop {
+  background:#4b2a627d;
+  backdrop-filter:blur(7px);
+}
+.success-modal::before {
+  content:"";
+  position:absolute;
+  inset:20px;
+  pointer-events:none;
+  border:2px dashed #b889cb;
+  border-radius:31px;
+}
+.success-modal__content {
+  position:relative;
+  z-index:2;
+  width:min(78%,470px);
+  margin:auto;
+  padding:7.5rem 0 4rem;
+  text-align:center;
+}
+.success-modal__check {
+  display:grid;
+  place-items:center;
+  width:74px;
+  height:74px;
+  margin:0 auto 1rem;
+  border:5px solid #efc653;
+  border-radius:50%;
+  color:#fff;
+  background:linear-gradient(145deg,#bb88d1,#8952a3);
+  box-shadow:0 5px 0 #bb8b2c;
+  font:700 2.4rem "Baloo 2",sans-serif;
+}
+.success-modal h2 {
+  margin:.7rem 0 1.2rem;
+  color:var(--purple);
+  font:700 clamp(3.7rem,10vw,6rem)/1.05 "Dancing Script",cursive;
+}
+.success-modal p:not(.eyebrow) {
+  margin:0 auto 1.8rem;
+  color:#715c7a;
+  font:500 1.15rem/1.55 "Baloo 2",sans-serif;
+}
+.success-modal button { width:min(100%,330px); }
+.success-modal__flowers {
+  position:absolute;
+  z-index:1;
+  top:-18px;
+  left:0;
+  width:100%;
+  height:100px;
+  display:flex;
+  justify-content:space-around;
+}
+.success-modal__flowers i {
+  position:relative;
+  width:13px;
+  height:76px;
+  border-radius:100% 0;
+  background:linear-gradient(#71966b,#a9bd8a);
+}
+.success-modal__flowers i::before,.success-modal__flowers i::after {
+  content:"";
+  position:absolute;
+  width:31px;
+  height:38px;
+  border-radius:60% 35% 60% 35%;
+  background:radial-gradient(circle at 70% 30%,#fff 0 8%,#d9b4eb 12% 38%,#9560b1 75%);
+}
+.success-modal__flowers i::before { top:24px; left:-21px; transform:rotate(-35deg); }
+.success-modal__flowers i::after { top:37px; left:5px; transform:rotate(30deg); }
+.success-modal__butterfly { z-index:3; top:24%; right:5%; transform:scale(.8) rotate(25deg); }
+
+@media(max-width:540px) {
+  .success-modal { width:calc(100vw - 2.5rem); border-radius:32px; }
+  .success-modal::before { inset:13px; border-radius:23px; }
+  .success-modal__content { width:76%; padding:6.5rem 0 3rem; }
+  .success-modal__check { width:62px; height:62px; font-size:2rem; }
+  .success-modal h2 { font-size:3.7rem; }
+  .success-modal p:not(.eyebrow) { font-size:1rem; }
+}
