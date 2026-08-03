@@ -514,12 +514,14 @@ button { font-family:"Baloo 2",sans-serif; }
 }
 .name {
   color:#a56abc;
-  background:none;
+  background:none !important;
   -webkit-background-clip:initial;
   background-clip:initial;
-  -webkit-text-fill-color:currentColor;
-  filter:none;
-  animation:title-arrive .9s .15s cubic-bezier(.2,.8,.25,1) both,name-soft-glow 7s 1.8s ease-in-out infinite;
+  -webkit-text-fill-color:#a56abc !important;
+  filter:none !important;
+  text-shadow:none !important;
+  animation:none !important;
+  transform:none !important;
 }
 
 /* Botões permanecem fixos para facilitar leitura e toque */
