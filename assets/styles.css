@@ -353,6 +353,7 @@ button { font-family:"Baloo 2",sans-serif; }
   box-shadow:0 5px 0 #bb8b2c;
   font:700 2.4rem "Baloo 2",sans-serif;
 }
+.success-modal__check svg { width:42px; fill:none; stroke:currentColor; stroke-width:5; stroke-linecap:round; stroke-linejoin:round; }
 .success-modal h2 {
   margin:.7rem 0 1.2rem;
   color:var(--purple);
@@ -401,3 +402,20 @@ button { font-family:"Baloo 2",sans-serif; }
   .success-modal h2 { font-size:3.7rem; }
   .success-modal p:not(.eyebrow) { font-size:1rem; }
 }
+
+/* Ornamentos e iconografia vetorial */
+.floral-divider { display:grid; place-items:center; width:180px; max-width:70%; margin:1rem auto; color:#aa78be; }
+.floral-divider svg { display:block; width:100%; fill:#d6addf66; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+.date-butterfly { display:grid; place-items:center; width:42px; }
+.date-butterfly svg { width:42px; fill:#cda4dd66; stroke:var(--purple); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.venue span { display:inline-flex; align-items:center; justify-content:center; gap:.35rem; }
+.venue span svg { width:24px; fill:#a8b48135; stroke:var(--green); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.primary-link { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; }
+.primary-link svg,.rsvp-form button svg { width:22px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.rsvp-form button { display:flex; align-items:center; justify-content:center; gap:.55rem; }
+.back-link { display:flex; align-items:center; justify-content:center; gap:.25rem; }
+.back-link svg { width:20px; fill:none; stroke:currentColor; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
+.gift-item:nth-child(1) .gift-icon { background:linear-gradient(145deg,#f4e9fb,#dfc6ed); }
+.gift-item:nth-child(2) .gift-icon { background:linear-gradient(145deg,#f7eafa,#d8c2eb); }
+.gift-item:nth-child(3) .gift-icon { background:linear-gradient(145deg,#f0e4f8,#d3b8e7); }
+.gift-icon svg { filter:drop-shadow(0 2px 1px #fff); }
