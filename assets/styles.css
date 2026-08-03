@@ -507,6 +507,21 @@ button { font-family:"Baloo 2",sans-serif; }
   }
 }
 
+/* Nome sólido, sem camada de brilho sobre as letras */
+@keyframes name-soft-glow {
+  0%,72%,100% { text-shadow:2px 3px 0 #e2c9ed; }
+  82% { text-shadow:2px 3px 0 #e2c9ed,0 0 12px #c98dde80; }
+}
+.name {
+  color:#a56abc;
+  background:none;
+  -webkit-background-clip:initial;
+  background-clip:initial;
+  -webkit-text-fill-color:currentColor;
+  filter:none;
+  animation:title-arrive .9s .15s cubic-bezier(.2,.8,.25,1) both,name-soft-glow 7s 1.8s ease-in-out infinite;
+}
+
 /* Botões permanecem fixos para facilitar leitura e toque */
 .action-grid .round-icon { animation:none; }
 .action-grid a:hover,.action-grid a:active,
