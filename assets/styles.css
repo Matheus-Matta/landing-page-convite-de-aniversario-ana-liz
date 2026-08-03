@@ -526,8 +526,11 @@ button { font-family:"Baloo 2",sans-serif; }
 
 /* Reflexo isolado: a camada base do nome permanece sólida */
 @keyframes name-reflection {
-  0%,68%,100% { background-position:180% center; }
-  82% { background-position:-80% center; }
+  0%,69%,88%,100% { opacity:0; background-position:180% center; }
+  70% { opacity:0; background-position:180% center; }
+  73% { opacity:1; }
+  84% { opacity:1; background-position:-80% center; }
+  87% { opacity:0; background-position:-80% center; }
 }
 .name { position:relative; display:block; width:max-content; max-width:100%; margin-left:auto; margin-right:auto; }
 .name::after {
@@ -545,6 +548,7 @@ button { font-family:"Baloo 2",sans-serif; }
   -webkit-text-fill-color:transparent;
   text-shadow:none;
   filter:none;
+  opacity:0;
   animation:name-reflection 7s 2s ease-in-out infinite;
 }
 
