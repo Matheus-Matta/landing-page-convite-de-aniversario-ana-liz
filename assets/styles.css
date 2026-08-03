@@ -737,6 +737,55 @@ button { font-family:"Baloo 2",sans-serif; }
   .garden--bottom::after { height:42px; }
 }
 
+/* Jardim mais orgânico e menos repetitivo */
+@keyframes flower-sway-soft {
+  0%,100% { transform:rotate(var(--r,0deg)); }
+  50% { transform:rotate(calc(var(--r,0deg) + 2deg)); }
+}
+.garden--bottom {
+  z-index:12;
+  overflow:visible;
+  justify-content:space-around;
+}
+.garden--bottom i {
+  animation:flower-sway-soft 5.5s ease-in-out infinite;
+}
+.garden--bottom i:nth-child(2n) { animation-delay:-2.1s; }
+.garden--bottom i:nth-child(3n) { animation-delay:-3.7s; }
+.garden--bottom i:nth-child(4),.garden--bottom i:nth-child(9) { visibility:hidden; }
+.garden--bottom i:nth-child(1) { --r:-5deg; margin-left:-1.5%; }
+.garden--bottom i:nth-child(2) { --r:7deg; margin-right:1%; }
+.garden--bottom i:nth-child(3) { --r:-3deg; }
+.garden--bottom i:nth-child(5) { --r:9deg; margin-left:2%; }
+.garden--bottom i:nth-child(6) { --r:-7deg; margin-right:-1%; }
+.garden--bottom i:nth-child(7) { --r:4deg; }
+.garden--bottom i:nth-child(8) { --r:-9deg; margin-left:1.5%; }
+.garden--bottom i:nth-child(10) { --r:6deg; }
+.garden--bottom i:nth-child(11) { --r:-4deg; margin-right:-1.5%; }
+.garden i:nth-child(3n) { --flower-scale:.92; }
+.garden i:nth-child(4n) { --flower-scale:.76; }
+.garden i:nth-child(5n) { --flower-scale:.86; }
+.garden--bottom::after {
+  z-index:0;
+  height:58px;
+  background:
+    repeating-linear-gradient(79deg,transparent 0 13px,#5f8955 14px 15px,transparent 16px 29px),
+    repeating-linear-gradient(101deg,transparent 0 19px,#7fa069 20px 21px,transparent 22px 37px),
+    repeating-linear-gradient(84deg,transparent 0 31px,#94ae76 32px 33px,transparent 34px 49px),
+    radial-gradient(ellipse at 7% 110%,#71945f 0 8%,transparent 8.5%),
+    radial-gradient(ellipse at 24% 112%,#8ca66f 0 7%,transparent 7.5%),
+    radial-gradient(ellipse at 48% 112%,#668d58 0 9%,transparent 9.5%),
+    radial-gradient(ellipse at 73% 110%,#8da970 0 8%,transparent 8.5%),
+    radial-gradient(ellipse at 93% 112%,#6d925c 0 7%,transparent 7.5%),
+    linear-gradient(to top,#718f5d 0 7px,transparent 8px);
+  clip-path:polygon(0 100%,0 82%,2% 96%,3% 58%,4% 94%,7% 70%,9% 96%,12% 62%,14% 95%,18% 76%,21% 96%,25% 52%,27% 95%,31% 72%,35% 97%,39% 61%,42% 96%,47% 74%,51% 97%,55% 55%,58% 96%,63% 68%,67% 97%,72% 62%,75% 96%,80% 73%,84% 97%,89% 55%,92% 95%,96% 69%,98% 95%,100% 76%,100% 100%);
+}
+
+@media(max-width:540px) {
+  .garden--bottom i:nth-child(6) { visibility:hidden; }
+  .garden--bottom::after { height:48px; }
+}
+
 /* Botões permanecem fixos para facilitar leitura e toque */
 .action-grid .round-icon { animation:none; }
 .action-grid a:hover,.action-grid a:active,
