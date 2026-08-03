@@ -237,3 +237,57 @@ button { font-family:"Baloo 2",sans-serif; }
   .gift-item span { font-size:1.3rem; }
   .gift-item strong { font-size:1.05rem; }
 }
+
+/* Ritmo vertical e estrutura compartilhada entre todas as páginas */
+.hero-content,.gifts-content,.rsvp-card__content {
+  width:min(calc(100% - 5rem),620px);
+  padding-top:10.5rem;
+  padding-bottom:10rem;
+}
+.rsvp-card__content { max-width:590px; }
+.rsvp-card .stitched-frame { display:block; }
+.rsvp-card::after { display:none; }
+.rsvp-card .back-button { top:6.5rem; left:max(3.3rem,calc(50% - 395px)); }
+.rsvp-form,.rsvp-form fieldset,.rsvp-form input,.rsvp-form textarea,
+.rsvp-form .choice { min-width:0; max-width:100%; }
+.rsvp-form { width:100%; overflow:hidden; }
+.rsvp-card .intro { width:100%; overflow-wrap:anywhere; }
+.rsvp-card .garden { z-index:7; }
+.rsvp-card .css-butterfly { z-index:6; }
+
+@media(max-width:540px) {
+  .hero-content,.gifts-content,.rsvp-card__content {
+    width:calc(100% - 6rem);
+    padding-top:9.5rem;
+    padding-bottom:9rem;
+  }
+  .rsvp-card .back-button { top:6.35rem; left:2.75rem; }
+  .rsvp-card__content { width:calc(100% - 5.6rem); }
+  .rsvp-form { overflow:visible; }
+  .rsvp-form input,.rsvp-form textarea,.rsvp-form button,.rsvp-form .choice { width:100%; }
+}
+
+.rsvp-card__content {
+  width:calc(100vw - 6rem) !important;
+  max-width:590px;
+  overflow:visible;
+}
+.rsvp-form { width:100%; overflow:hidden; }
+.rsvp-form > input,.rsvp-form > textarea,.rsvp-form > button {
+  display:block;
+  width:100%;
+  max-width:100%;
+}
+.rsvp-form .choice { width:100%; max-width:100%; }
+.rsvp-form .choice input {
+  flex:0 0 1.05rem;
+  width:1.05rem;
+  min-width:1.05rem;
+  max-width:1.05rem;
+}
+.rsvp-form .choice span { flex:1; min-width:0; overflow-wrap:anywhere; }
+
+@media(max-width:540px) {
+  .rsvp-card__content { width:calc(100vw - 6rem) !important; max-width:calc(100vw - 6rem); }
+  .rsvp-form { overflow:hidden; }
+}
