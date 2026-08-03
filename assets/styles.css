@@ -68,7 +68,9 @@ body { font-family:"Baloo 2",sans-serif; }
 .round-icon svg { width:54px; fill:#fff2; stroke-width:2.7; }
 .gifts-content { padding-top:8.5rem; }
 .gifts-title { margin:1rem 0 1.5rem; font:400 clamp(3.1rem,9vw,5.4rem)/1.25 "Pacifico",cursive; }
-.gifts-intro { line-height:1.65; }
+.gifts-intro { width:100%; line-height:1.65; overflow-wrap:anywhere; }
+.gift-list,.gift-item,.gift-item div { min-width:0; max-width:100%; }
+.gift-item div span,.gift-item div strong { overflow-wrap:anywhere; }
 .gift-item span { font:400 1.6rem/1.35 "Pacifico",cursive; }.gift-item strong { font-family:"Baloo 2",sans-serif; font-weight:600; }
 .rsvp-card::before { inset:0; border:0; border-radius:0; background-image:radial-gradient(circle,#bd88d7 0 3px,transparent 4px),radial-gradient(circle,#96a96f 0 2px,transparent 3px); background-position:3% 22%,97% 38%; background-size:110px 145px,135px 175px; opacity:.17; }
 .rsvp-card::after { top:5.7rem; bottom:6rem; left:max(2.5%,calc(50% - 410px)); right:max(2.5%,calc(50% - 410px)); border-radius:42px; }
@@ -87,4 +89,76 @@ button { font-family:"Baloo 2",sans-serif; }
   .action-grid { gap:.4rem; }
   .action-grid a { font-size:.62rem; }
   .gift-item span { font-size:1.35rem; }
+}
+
+/* Cartão orgânico inspirado nas artes de referência */
+.paper,.rsvp-card {
+  background:
+    linear-gradient(90deg,#d9bfea 0%,#ead8f5 9%,#f8f0fc 16%,#fffafd 25%,#fffafd 75%,#f8f0fc 84%,#ead8f5 91%,#d9bfea 100%);
+}
+.paper::after {
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:5.2rem;
+  bottom:5.2rem;
+  left:max(1.5rem,calc(50% - 430px));
+  right:max(1.5rem,calc(50% - 430px));
+  background:linear-gradient(145deg,#fff,#fffafd 60%,#fbf4ff);
+  border-radius:46% 46% 42% 42% / 7% 7% 6% 6%;
+  box-shadow:0 10px 35px #71468720,0 0 0 10px #ffffff9c;
+}
+.stitched-frame {
+  z-index:1;
+  top:6.1rem;
+  bottom:6.1rem;
+  left:max(2.4rem,calc(50% - 410px));
+  right:max(2.4rem,calc(50% - 410px));
+  border:3px solid #9862b1;
+  border-radius:46% 46% 42% 42% / 7% 7% 6% 6%;
+}
+.stitched-frame::after {
+  inset:13px 15px;
+  border-width:2px;
+  border-radius:46% 46% 42% 42% / 7% 7% 6% 6%;
+}
+.hero-content,.gifts-content { z-index:2; }
+.hero-content { padding-top:8.3rem; }
+.eyebrow { letter-spacing:.12em; }
+.name { font-size:clamp(4.5rem,12vw,7.8rem); color:#a56abc; }
+.verse { color:#996bab; }
+.date-row { position:relative; }
+.date-row::before,.date-row::after {
+  content:""; width:38px; height:1px; background:linear-gradient(90deg,transparent,#b184c3);
+}
+.date-row::after { transform:rotate(180deg); }
+.venue { margin-top:1.45rem; }
+.action-grid { margin-top:2rem; }
+.gifts-title { color:#a56abc; }
+.gift-item { border-bottom-color:#b68bc7; }
+.gift-icon { border:2px solid #c89ede; box-shadow:inset 0 0 0 5px #fff8; }
+.garden { z-index:5; }
+.garden i:nth-child(1),.garden i:nth-child(7) { height:125px; }
+.garden i:nth-child(4)::before { width:48px; height:52px; }
+.css-butterfly { z-index:6; }
+.rsvp-card::after {
+  top:6.1rem;
+  bottom:6.1rem;
+  left:max(2.4rem,calc(50% - 410px));
+  right:max(2.4rem,calc(50% - 410px));
+  border:3px solid #9862b1;
+  border-radius:46% 46% 42% 42% / 7% 7% 6% 6%;
+}
+
+@media(max-width:540px) {
+  .paper::after { left:1rem; right:1rem; border-radius:42% 42% 36% 36% / 4% 4% 3% 3%; }
+  .stitched-frame,.rsvp-card::after { left:1.55rem; right:1.55rem; border-radius:42% 42% 36% 36% / 4% 4% 3% 3%; }
+  .stitched-frame::after { inset:10px; }
+  .hero-content,.gifts-content,.rsvp-card__content { width:calc(100% - 5.6rem); }
+  .gifts-content { padding-inline:.35rem; }
+  .hero-content { padding-top:7.7rem; }
+  .name { font-size:clamp(3.6rem,16vw,5rem); }
+  .verse { font-size:1.08rem; line-height:1.55; }
+  .date-row::before,.date-row::after { display:none; }
+  .date-row strong { font-size:2.6rem; }
 }
